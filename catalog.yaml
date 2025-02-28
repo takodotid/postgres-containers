@@ -1,0 +1,10 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: ClusterImageCatalog
+metadata:
+  name: tako-postgresql
+spec:
+  images:
+    - major: 16
+      image: ghcr.io/takodotid/postgresql:16-4b122bf
+    - major: 17
+      image: ghcr.io/takodotid/postgresql:17-4b122bf
