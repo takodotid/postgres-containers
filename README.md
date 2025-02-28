@@ -1,3 +1,7 @@
-# CNPG PostgreSQL Container Images with TimescaleDB
+# Tako's CNPG PostgreSQL Container Images
 
-This repository contains the sources for a customized CNPG PostgreSQL container image with TimescaleDB extension.
+This repository contains the sources for a customized CNPG PostgreSQL container image used by Tako.
+
+## Changes
+- Added `timescaledb` extension
+- Added `pg_cron` extension

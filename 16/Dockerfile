@@ -7,7 +7,8 @@ USER root
 RUN set -xe; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
-        "postgresql-16-timescaledb" \
+        "postgresql-${PG_MAJOR}-timescaledb" \
+        "postgresql-${PG_MAJOR}-cron" \
     ; \
     rm -fr /tmp/* ; \
     rm -rf /var/lib/apt/lists/*;
