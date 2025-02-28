@@ -1,0 +1,27 @@
+name: Build & Push Postgres 17
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "17/Dockerfile"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "17/Dockerfile"
+
+jobs:
+  docker:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/build.yaml
+    with:
+        dockerfile: "17/Dockerfile"
+        images: |
+            ghcr.io/${{ github.repository_owner }}/postgresql
+    secrets:
+      ghcr-username: ${{ github.repository_owner }}
+      ghcr-access-token: ${{ secrets.GITHUB_TOKEN }}
