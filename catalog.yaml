@@ -5,6 +5,6 @@ metadata:
 spec:
   images:
     - major: 16
-      image: ghcr.io/takodotid/postgresql:16-3ef4535
+      image: ghcr.io/takodotid/postgresql:16-a29d1df
     - major: 17
-      image: ghcr.io/takodotid/postgresql:17-8bad7a5
+      image: ghcr.io/takodotid/postgresql:17-080ad19
