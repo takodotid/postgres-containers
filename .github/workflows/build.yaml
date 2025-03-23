@@ -41,13 +41,6 @@ jobs:
           echo "MAJOR=$(echo $VERSION | cut -d. -f1)" >> $GITHUB_OUTPUT
           echo "MINOR=$(echo $VERSION | cut -d. -f2)" >> $GITHUB_OUTPUT
 
-      - name: Get TimescaleDB version in Dockerfile
-        id: timescaledb
-        run: |
-          export VERSION=$(cat ${{ inputs.dockerfile }} | sed -n 's/.*timescale\/timescaledb:\([0-9.]*\).*/\1/p')
-          echo "MAJOR=$(echo $VERSION | cut -d. -f1)" >> $GITHUB_OUTPUT
-          echo "MINOR=$(echo $VERSION | cut -d. -f2)" >> $GITHUB_OUTPUT
-
       - name: Generate Docker image metadata
         uses: docker/metadata-action@v5.6.1
         id: meta
