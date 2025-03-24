@@ -20,7 +20,7 @@ RUN set -xe; \
         "postgresql-${PG_MAJOR}-postgis" \
     ; \
     apt-get purge -y --auto-remove wget lsb-release; \
-    rm -fr /tmp/* ; \
+    rm -rf /tmp/* ; \
     rm -rf /var/lib/apt/lists/*;
 
 # Switch to the postgres user back
