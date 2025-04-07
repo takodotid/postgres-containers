@@ -16,6 +16,9 @@ permissions:
 
 jobs:
   build:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}-${{ matrix.platform }}
+      cancel-in-progress: true
     strategy:
       matrix:
         include:
