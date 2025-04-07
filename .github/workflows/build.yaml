@@ -60,9 +60,8 @@ jobs:
           context: .
           file: ./${{ inputs.dockerfile }}
           platforms: ${{ matrix.platform }}
-          push: ${{ github.event_name == 'push' }}
           labels: ${{ steps.meta.outputs.labels }}
-          outputs: type=image,"${{ inputs.image }}",push-by-digest=true,name-canonical=true,push=true
+          outputs: type=image,"name=${{ inputs.image }}",push-by-digest=true,name-canonical=true,push=${{ github.event_name == 'push' }}
 
       - name: Export digest
         run: |
