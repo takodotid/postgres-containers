@@ -1,4 +1,4 @@
-FROM ghcr.io/cloudnative-pg/postgresql:16.8-bookworm
+FROM ghcr.io/cloudnative-pg/postgresql:17.4-bookworm
 
 ENV TIMESCALEDB_MAJOR=2
 ENV TIMESCALEDB_VERSION=2.19.1
