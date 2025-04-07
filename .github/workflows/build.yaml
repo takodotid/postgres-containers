@@ -116,8 +116,8 @@ jobs:
         with:
           images: ${{ inputs.image }}
           tags: |
-            ${{ needs.build.outputs.MAJOR }}-${{ needs.build.outputs.MINOR }}
-            ${{ needs.build.outputs.MAJOR }}-${{ needs.build.outputs.MINOR }}
+            ${{ needs.build.outputs.MAJOR }}.${{ needs.build.outputs.MINOR }}
+            ${{ needs.build.outputs.MAJOR }}.${{ needs.build.outputs.MINOR }}
 
             type=sha,prefix=${{ needs.build.outputs.MAJOR }}-,suffix=,format=short
             type=sha,prefix=${{ needs.build.outputs.MAJOR }}-,suffix=,format=long
