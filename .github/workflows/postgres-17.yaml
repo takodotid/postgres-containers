@@ -20,8 +20,4 @@ jobs:
     uses: ./.github/workflows/build.yaml
     with:
         dockerfile: "17/Dockerfile"
-        images: |
-            ghcr.io/${{ github.repository_owner }}/postgresql
-    secrets:
-      ghcr-username: ${{ github.repository_owner }}
-      ghcr-access-token: ${{ secrets.GITHUB_TOKEN }}
+        image: ghcr.io/${{ github.repository_owner }}/postgresql

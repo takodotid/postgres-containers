@@ -1,12 +1,12 @@
 FROM ghcr.io/cloudnative-pg/postgresql:17.4-bookworm
 
 ENV TIMESCALEDB_MAJOR=2
-ENV TIMESCALEDB_VERSION=2.19.1
+ENV TIMESCALEDB_VERSION=2.19.2
 
-# Switch to root user to install extensions
+# Switch to root user to install extensions.
 USER root
 
-# Add timescaledb repository, and install extensions
+# Add timescaledb repository, and install extensions.
 RUN set -xe; \
     apt-get update; \
     apt-get install -y --no-install-recommends wget lsb-release; \
@@ -23,5 +23,5 @@ RUN set -xe; \
     rm -rf /tmp/* ; \
     rm -rf /var/lib/apt/lists/*;
 
-# Switch to the postgres user back
+# Switch to the postgres user back.
 USER postgres
