@@ -1,7 +1,7 @@
 FROM ghcr.io/cloudnative-pg/postgresql:17.5-bookworm
 
 ENV TIMESCALEDB_MAJOR=2
-ENV TIMESCALEDB_VERSION=2.20.2
+ENV TIMESCALEDB_VERSION=2.20.3
 
 # Switch to root user to install extensions
 USER root
