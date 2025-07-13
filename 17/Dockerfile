@@ -23,5 +23,5 @@ RUN set -xe; \
     rm -rf /tmp/* ; \
     rm -rf /var/lib/apt/lists/*;
 
-# Switch to the postgres user back
+# Switch back to the postgres user
 USER postgres
