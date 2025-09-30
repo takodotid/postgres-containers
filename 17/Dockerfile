@@ -1,4 +1,4 @@
-FROM ghcr.io/cloudnative-pg/postgresql:17.6-system-trixie
+FROM ghcr.io/cloudnative-pg/postgresql:17.6-system-bookworm
 
 ENV TIMESCALEDB_VERSION_BEFORE=2.21.3 \
     TIMESCALEDB_VERSION=2.21.4
