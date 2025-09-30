@@ -14,8 +14,8 @@ RUN set -xe; \
     wget --quiet -O - https://packagecloud.io/timescale/timescaledb/gpgkey | gpg --dearmor -o /etc/apt/trusted.gpg.d/timescaledb.gpg; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
-        "timescaledb-${TIMESCALEDB_MAJOR}-postgresql-16=${TIMESCALEDB_VERSION}*" \
-        "timescaledb-${TIMESCALEDB_MAJOR}-loader-postgresql-16=${TIMESCALEDB_VERSION}*" \
+        "timescaledb-$(echo $TIMESCALEDB_VERSION | cut -d '.' -f1)-postgresql-17=${TIMESCALEDB_VERSION}*" \
+        "timescaledb-$(echo $TIMESCALEDB_VERSION | cut -d '.' -f1)-loader-postgresql-17=${TIMESCALEDB_VERSION}*" \
         "postgresql-16-cron" \
         "postgresql-16-postgis" \
     ; \
