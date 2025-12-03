@@ -1,0 +1,23 @@
+name: Build & Push Postgres 18
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "18/Dockerfile"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "18/Dockerfile"
+
+jobs:
+  docker:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/build.yaml
+    with:
+      dockerfile: "18/Dockerfile"
+      image: ghcr.io/${{ github.repository_owner }}/postgresql
