@@ -9,4 +9,4 @@ spec:
     - major: 17
       image: ghcr.io/takodotid/postgresql:17.7-0e91bf79c0ab452b5ce8e6d854b02e2d193760fb
     - major: 18
-      image: ghcr.io/takodotid/postgresql:18.1-08384eb605c3a5bac787b7d6a3bd0ca2e1dcd83c
+      image: ghcr.io/takodotid/postgresql:18.1-688bf7fd6de4c8a8a68e3099126e3576541424dd
