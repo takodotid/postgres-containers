@@ -92,6 +92,7 @@ jobs:
       MINOR: ${{ steps.postgres.outputs.MINOR }}
 
   merge:
+    if: ${{ github.event_name != 'pull_request' }}
     runs-on: ubuntu-24.04
     needs: [build]
     steps:
