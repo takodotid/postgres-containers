@@ -1,6 +1,6 @@
 FROM ghcr.io/cloudnative-pg/postgresql:17.9-system-trixie@sha256:441d14eec30e415e6a0e110dc14434d7872c9e7b4676414d4aa9feff0d8e248d
 
-ENV TIMESCALEDB_VERSION=2.25.1
+ENV TIMESCALEDB_VERSION=2.25.2
 
 # Switch to root user to install extensions
 USER root
