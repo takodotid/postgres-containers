@@ -1,4 +1,4 @@
-FROM ghcr.io/cloudnative-pg/postgresql:18.4-standard-trixie@sha256:184219ecec559d15fa03932b0d3005e0372f7027746bb682aca478bc4918f776
+FROM ghcr.io/cloudnative-pg/postgresql:19.0-standard-trixie@sha256:e845b0146b37f13d912461b63b1a25ef4bbc6992e19fa2447f6ec001f4ee06e8
 
 ENV TIMESCALEDB_VERSION=2.27.2
 
